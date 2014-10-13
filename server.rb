@@ -36,6 +36,7 @@ report.to_json
 end
 
 post "/reports" do
+<<<<<<< HEAD
 content_type(:json)
 reports = Report.create(report_params(params))
 comment.to_json
@@ -52,6 +53,24 @@ delete "/reports/:id" do
 content_type(:json)
 report = Report.find(params["id"])
 report.destroy
+=======
+	content_type(:json)
+	reports = Report.create(report_params(params))
+	comment.to_json
+end
+
+put "/reports/:id" do
+	content_type(:json)
+	report = Report.find(params[:id])
+	report.update(report_params(params))
+	report.to_json
+end
+
+delete "/reports/:id" do
+	content_type(:json)
+	report = Report.find(params["id"])
+	report.destroy
+>>>>>>> 84aeeda2209f22206949f085b931f2f33146000d
 end
 
 
@@ -67,6 +86,15 @@ comment = Comment.create(comment_params(params))
 comment.to_json
 end
 
+<<<<<<< HEAD
+=======
+post "/comments" do
+	content_type(:json)
+	comment = Comment.create(comment_params(params))
+	comment.to_json
+end
+
+>>>>>>> 84aeeda2209f22206949f085b931f2f33146000d
 
 #Users routes
 get "/users" do
@@ -82,6 +110,7 @@ user.to_json
 end
 
 post "/users" do
+<<<<<<< HEAD
 content_type(:json)
 user = User.create(user_params(params))
 user.to_json
@@ -92,6 +121,18 @@ content_type(:json)
 useer = Report.find(params[:id])
 user.update(user_params(params))
 user.to_json
+=======
+	content_type(:json)
+	user = User.create(user_params(params))
+	user.to_json
+end
+
+put "/users/:id" do
+	content_type(:json)
+	useer = Report.find(params[:id])
+	user.update(user_params(params))
+	user.to_json
+>>>>>>> 84aeeda2209f22206949f085b931f2f33146000d
 end
 
 delete "/users/:id" do
@@ -121,6 +162,7 @@ neighborhoods.to_json
 end
 
 get "/neighborhoods/:id/reports" do
+<<<<<<< HEAD
 content_type(:json)
 reports = Report.where({neighborhood_id: params["id"]})
 reports.to_json
@@ -138,3 +180,27 @@ end
 def user_params(params)
   params.slice(*User.column_names)
 end
+=======
+	content_type(:json)
+	reports = Report.where({neighborhood_id: params["id"]})
+	reports.to_json
+end
+
+
+def report_params(params)
+  params.slice(*Report.column_names)
+end
+
+def comment_params(params)
+  params.slice(*Comment.column_names)
+end
+
+def user_params(params)
+  params.slice(*User.column_names)
+end
+
+
+
+
+
+>>>>>>> 84aeeda2209f22206949f085b931f2f33146000d
