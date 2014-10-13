@@ -1,3 +1,4 @@
+</html>
 <html>
 <head>
 	<title>Piler</title>
@@ -18,10 +19,11 @@
 			<div class="col-md-3"><div id="logo2"><img src="images/logo2.png"></div></div>
 		</div>
 		<div class="row" id="two">
-			<div class="col-md-3" id="home"></div>
+<!-- 			<div class="col-md-3" id="home"></div> -->
 			<div class="col-md-3"><a href="#" id="file">File a Report</a></div>
 			<div class="col-md-3"><a href="#" id="profile">View Profile</a></div>
 			<div class="col-md-3"><a href="#" id="add">Add User</a></div>
+			<div class="col-md-3"><a href="#" id="reports">Reports</a></div>
 		</div>
 	</header>
 	<div class="sidebar"></div>
@@ -43,16 +45,17 @@
 			</div>
 		</div>
 	</div> -->
-	// <script>
+	<script>
  //    $("#menu-toggle").click(function(e) {
  //        e.preventDefault();
  //        $("#wrapper").toggleClass("toggled");
  //    });
- //    </script>
+ // </script>
 	<script id="file_report_template" type="text/template">
-		<h2>File a Report</h2>
+		<div class="file_a_report">
+			<h3>File a Report</h3>
 			<ul>
-				<form action="/reports/:id" method="POST">
+				<form action="/reports" method="POST">
 					<li>
 						<input name="anonymous" type="radio" value="anonymous">  
 		    			<label for="anonymous">Anonymous</label>
@@ -81,7 +84,7 @@
 		</div>
 	</script>	
 	<script id="file_report_template" type="text/template">
-		<h2>File a Report</h2>
+		<h3>File a Report</h3>
 			<ul>
 				<form action="/reports/:id" method="POST">
 					<li>
@@ -139,4 +142,3 @@
 		</form>
 	</script>
 </body>
-</html>

@@ -18,10 +18,6 @@ function newUserView (){
 	addNewUserButtonListener()
 	}
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 84aeeda2209f22206949f085b931f2f33146000d
 
 //This function adds an event listener onto the submit new user function, which sends out an AJAX 
 function addNewUserButtonListener(){
